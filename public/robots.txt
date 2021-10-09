@@ -1,2 +1,9 @@
+# *
 User-agent: *
-Sitemap: https://example.io/sitemap.xml
+Allow: /
+
+# Host
+Host: https://meepoong.com/
+
+# Sitemaps
+Sitemap: https://meepoong.com/sitemap.xml
