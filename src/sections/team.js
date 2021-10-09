@@ -27,7 +27,7 @@ const TEAM_DATA = [
     url: 'https://www.facebook.com/ningnong.yuranan',
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/meepoong-af0cc.appspot.com/o/team%2F238620174_2216832911790235_1037787705840527436_n_adobespark.jpeg?alt=media&token=715e0ff5-ab88-47f4-8727-95397da9d39c',
     title: 'ยุรนันท์ ประจวบสุข',
-    designation: 'Head of YouTube Video Production',
+    designation: 'Full Stack Developer',
   },
   {
     url: 'https://www.facebook.com/Chef.Anchisa',
