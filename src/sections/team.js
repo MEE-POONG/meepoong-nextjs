@@ -2,6 +2,10 @@ import React from 'react';
 import { Box, Container, Image } from 'theme-ui';
 import BlockTitle from 'components/block-title';
 import { keyframes } from '@emotion/core';
+import bannerIcon1 from 'assets/banner-icon-1-1.svg';
+import bannerIcon2 from 'assets/banner-icon-1-2.svg';
+import bannerIcon3 from 'assets/banner-icon-1-3.svg';
+import bannerIcon4 from 'assets/banner-icon-1-4.svg';
 import bannerIcon5 from 'assets/banner-icon-1-5.svg';
 import bannerIcon6 from 'assets/banner-icon-1-6.svg';
 import bannerIcon7 from 'assets/dot-pattern.svg';
@@ -49,6 +53,30 @@ const Team = () => {
   return (
     <Box as="section" id="team" sx={styles.services}>
       <Container sx={styles.container}>
+        <Image
+          sx={styles.bannerIcon1}
+          className="bannerIcon"
+          alt="banner icon"
+          src={bannerIcon1}
+        />
+        <Image
+          sx={styles.bannerIcon2}
+          className="bannerIcon"
+          alt="banner icon"
+          src={bannerIcon2}
+        />
+        <Image
+          sx={styles.bannerIcon3}
+          className="bannerIcon"
+          alt="banner icon"
+          src={bannerIcon3}
+        />
+        <Image
+          sx={styles.bannerIcon4}
+          className="bannerIcon"
+          alt="banner icon"
+          src={bannerIcon4}
+        />
         <Image
           sx={styles.bannerIcon5}
           className="bannerIcon"
