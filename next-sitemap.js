@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: 'https://startup-agency-classic.vercel.app',
+  siteUrl: 'https://meepoong.com/',
   generateRobotsTxt: true,
 };
