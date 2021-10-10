@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import React from 'react';
 import { jsx, Box, Text, Container } from 'theme-ui';
-import { Link } from 'components/link';
+// import { Link } from 'components/link';
+import { Link as ScrollLink } from 'react-scroll';
+
 import Logo from 'components/logo';
 import logoLight from 'assets/logo3.png';
 import menuItems from '../header/header.data';
@@ -32,8 +34,21 @@ export default function Footer() {
           </Text>
         </Box>
         <Box sx={styles.linksWrap}>
-          {menuItems.map(({ path, label }, i) => (
+          {/* {menuItems.map(({ path, label }, i) => (
             <Link key={i} path={path}>{label}</Link>
+          ))} */}{menuItems.map(({ path, label }, i) => (
+            <ScrollLink
+              activeClass="active"
+              sx={styles.nav.navLink}
+              to={path}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              key={i}
+            >
+              {label}
+            </ScrollLink>
           ))}
         </Box>
       </Container>
@@ -76,5 +91,26 @@ const styles = {
       '&:hover': { opacity: 0.7 },
     },
     'a+a': { ml: ['15px', null, null, null, '35px'] },
+  },
+  nav: {
+    navLink: {
+      fontSize: '16px',
+      color: '#02073E',
+      fontWeight: '400',
+      cursor: 'pointer',
+      lineHeight: '1.2',
+      mr: '48px',
+      transition: '500ms',
+      ':last-child': {
+        mr: '0',
+      },
+      '&:hover': {
+        background: 'linear-gradient(120deg,#1c99fe 20.69%,#7644ff 50.19%,#fd4766 79.69%)',
+        filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--color-primary)",endColorstr="var(--color-secondary)",GradientType=1)',
+        '-webkit-background-clip': 'text',
+        '-webkit-text-fill-color': 'transparent',
+        display: 'inline-block',
+      },
+    },
   },
 };

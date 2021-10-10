@@ -87,3 +87,17 @@
     font-size: 24px;
   }
   
+
+  
+/* %theme-gradient {
+  background: linear-gradient(-259deg, var(--color-primary) 0, var(--color-secondary) 100%);
+} */
+
+.theme-gradient {
+  background: var(--color-primary);
+  background: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, var(--color-primary) 79.69%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--color-primary)', endColorstr='var(--color-secondary)',GradientType=1 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}

@@ -23,6 +23,11 @@ const styles = {
       letterSpacing: '-1.5px',
       lineHeight: 1,
       mb: '20px',
+      background: 'linear-gradient(120deg,#1c99fe 20.69%,#7644ff 50.19%,#fd4766 79.69%)',
+      filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--color-primary)",endColorstr="var(--color-secondary)",GradientType=1)',
+      '-webkit-background-clip': 'text',
+      '-webkit-text-fill-color': 'transparent',
+      display: 'inline-block',
     },
     p: {
       lineHeight: 1.3,

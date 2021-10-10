@@ -12,10 +12,6 @@ export default [
     label: 'WHO ARE WE',
   },
   {
-    path: 'mission',
-    label: 'MISSION',
-  },
-  {
     path: 'team',
     label: 'TEAM',
   },

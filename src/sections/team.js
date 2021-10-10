@@ -206,7 +206,7 @@ const styles = {
     },
   },
   services: {
-    backgroundColor: '#F9FBFD',
+    // backgroundColor: '#F9FBFD',
     pt: ['80px', null, null, null, '80px', null, '100px'],
     pb: ['80px', null, null, null, '80px', null, '100px'],
   },
