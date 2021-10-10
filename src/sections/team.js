@@ -102,28 +102,28 @@ const Team = () => {
         />
 
 
-        <div class="container">
+        <div className="container">
           {TEAM_DATA.map((val, i) => (
-            <div class="card">
-              <div class="imgBx">
+            <div className="card">
+              <div className="imgBx">
                 <img
                   src={val.imageUrl}
                   alt=""
                 />
               </div>
-              <div class="content">
-                <div class="contentBx">
+              <div className="content">
+                <div className="contentBx">
                   <h3>{val.title} <br /><span>{val.designation}</span></h3>
                 </div>
-                <ul class="sci">
+                <ul className="sci">
                   <li Style="--i: 1">
-                    <a href={val.url}><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href={val.url}><i className="fa fa-instagram" aria-hidden="true"></i></a>
                   </li>
                   <li Style="--i: 2">
-                    <a href={val.url}><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href={val.url}><i className="fa fa-github" aria-hidden="true"></i></a>
                   </li>
                   <li Style="--i: 3">
-                    <a href={val.url}><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a href={val.url}><i className="fa fa-linkedin" aria-hidden="true"></i></a>
                   </li>
                 </ul>
               </div>

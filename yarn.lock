@@ -3654,7 +3654,7 @@ find-versions@^3.0.0:
   dependencies:
     semver-regex "^2.0.0"
 
-firebase@^3.9.0:
+firebase@3.9.0:
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/firebase/-/firebase-3.9.0.tgz#c4237f50f58eeb25081b1839d6cbf175f8f7ed9b"
   integrity sha1-xCN/UPWO6yUIGxg51svxdfj37Zs=
