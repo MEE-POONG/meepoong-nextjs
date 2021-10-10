@@ -15,12 +15,12 @@ export default [
     path: 'team',
     label: 'TEAM',
   },
-  {
-    path: 'testimonials',
-    label: 'BRAND',
-  },
-  {
-    path: 'news',
-    label: 'NEWS',
-  },
+  // {
+  //   path: 'testimonials',
+  //   label: 'BRAND',
+  // },
+  // {
+  //   path: 'news',
+  //   label: 'NEWS',
+  // },
 ];
