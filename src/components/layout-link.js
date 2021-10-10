@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import React, { useCallback } from 'react';
 import Sticky from 'react-stickynode';
 import { useStickyState } from 'contexts/app/app.provider';
@@ -6,7 +8,6 @@ import { useStickyDispatch } from 'contexts/app/app.provider';
 
 import Header from './header/header-link';
 import Footer from './footer/footer';
-
 export default function LayoutLink({ children }) {
   const isSticky = useStickyState('isSticky');
   const dispatch = useStickyDispatch();
