@@ -12,7 +12,7 @@ const masonryOptions = {
   transitionDuration: 0,
 };
 
-const Blogs = ({ data }) => {
+const Blogs = () => {
   const blogsRef = database.ref('/blogs');
   const [newsList, setNewsList] = React.useState([])
   React.useEffect(() => {

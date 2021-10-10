@@ -6,6 +6,9 @@ import 'rc-drawer/assets/index.css';
 import 'typeface-dm-sans';
 import './styles.css'
 
+import '@react-page/plugins-slate/lib/index.css';
+import '@react-page/editor/lib/index.css';
+import '@react-page/plugins-image/lib/index.css';
 
 export default function CustomApp({ Component, pageProps }) {
   useEffect(() => {

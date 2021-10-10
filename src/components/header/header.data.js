@@ -21,7 +21,7 @@ export default [
   // },
   {
     link: true,
-    path: 'news',
+    path: '/news',
     label: 'NEWS',
   },
 ];
