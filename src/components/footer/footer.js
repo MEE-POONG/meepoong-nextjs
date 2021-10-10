@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react';
 import { jsx, Box, Text, Container } from 'theme-ui';
-// import { Link } from 'components/link';
+import { Link } from 'components/link';
 import { Link as ScrollLink } from 'react-scroll';
 
 import Logo from 'components/logo';
@@ -36,17 +36,22 @@ export default function Footer() {
         <Box sx={styles.linksWrap}>
           {/* {menuItems.map(({ path, label }, i) => (
             <Link key={i} path={path}>{label}</Link>
-          ))} */}{menuItems.map(({ path, label }, i) => (
-            <ScrollLink
-              activeClass="active"
+          ))} */} {menuItems.map(({ path, label, link }, i) => (
+            link ? <Link
+              path={path}
               sx={styles.nav.navLink}
-              to={path}
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              key={i}
-            >
+              passHref={true}
+              ml={2}
+              label={label} /> : <ScrollLink
+                activeClass="active"
+                sx={styles.nav.navLink}
+                to={path}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                key={i}
+              >
               {label}
             </ScrollLink>
           ))}

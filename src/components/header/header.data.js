@@ -19,8 +19,9 @@ export default [
   //   path: 'testimonials',
   //   label: 'BRAND',
   // },
-  // {
-  //   path: 'news',
-  //   label: 'NEWS',
-  // },
+  {
+    link: true,
+    path: 'news',
+    label: 'NEWS',
+  },
 ];

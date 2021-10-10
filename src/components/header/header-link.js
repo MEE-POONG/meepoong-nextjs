@@ -22,18 +22,13 @@ export default function Header({ className }) {
                 sx={styles.nav.navLink}
                 passHref={true}
                 ml={2}
-                label={label} /> : <ScrollLink
-                  activeClass="active"
+                label={label} /> :
+                <Link
+                  path={'/#' + path}
                   sx={styles.nav.navLink}
-                  to={path}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  key={i}
-                >
-                {label}
-              </ScrollLink>
+                  passHref={true}
+                  ml={2}
+                  label={label} />
             ))}
           </Flex>
 

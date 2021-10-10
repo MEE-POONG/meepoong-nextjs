@@ -4,6 +4,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import Drawer from 'components/drawer';
 import { DrawerContext } from 'contexts/drawer/drawer.context';
 import { IoMdClose, IoMdMenu } from 'react-icons/io';
+import { Link } from 'components/link';
 import { Link as ScrollLink } from 'react-scroll';
 import menuItems from './header.data';
 import Logo from 'components/logo';
@@ -37,16 +38,20 @@ const MobileDrawer = () => {
         <Box sx={styles.content}>
           <Logo image={logoDark} width="300px" />
           <Box sx={styles.menu}>
-            {menuItems.map(({ path, label }, i) => (
-              <ScrollLink
-                activeClass="active"
-                to={path}
-                spy={true}
-                smooth={true}
-                offset={10}
-                duration={500}
-                key={i}
-              >
+            {menuItems.map(({ path, label, link }, i) => (
+              link ? <Link
+                path={path}
+                passHref={true}
+                ml={2}
+                label={label} /> : <ScrollLink
+                  activeClass="active"
+                  to={path}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  key={i}
+                >
                 {label}
               </ScrollLink>
             ))}
