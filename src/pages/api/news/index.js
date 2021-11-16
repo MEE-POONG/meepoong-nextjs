@@ -15,6 +15,6 @@ export default (req, res) => {
                 cloned.key = messageKey;
                 return cloned;
             }).value();
-        res.json(messages);
+        res.json(_.reverse(messages));
     });
 };
