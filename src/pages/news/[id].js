@@ -7,11 +7,26 @@ import Layout from 'components/layout-link';
 import BannerNewsDetail from 'sections/banner-news-detail';
 import BlogDetail from 'sections/blog-detail';
 
-import firebase from '../../firebase';
-import _ from 'lodash';
-const database = firebase.database();
+import useSWR from 'swr';
+import { useRouter } from 'next/router';
 
-const NewsDetail = ({ key, title, description, image, detail }) => {
+const fetcher = async (...args) => {
+  const res = await fetch(...args);
+
+  return res.json();
+};
+
+const NewsDetail = () => {
+  const router = useRouter();
+
+  const { id } = router.query;
+  const { data } = useSWR(`/api/news/${id}`, fetcher);
+
+  if (!data) {
+    return 'Loading...';
+  }
+
+  const { key, title, description, image, detail } = data
 
   return (
     <ThemeProvider theme={theme}>
@@ -24,15 +39,6 @@ const NewsDetail = ({ key, title, description, image, detail }) => {
       </StickyProvider>
     </ThemeProvider>
   )
-}
-
-NewsDetail.getInitialProps = async ({ query: { id } }) => {
-  let data
-  const blogsRef = database.ref('/blogs/' + id);
-  blogsRef.on('value', (snapshot) => {
-    data = snapshot.val();
-  });
-  return data
 }
 
 export default NewsDetail

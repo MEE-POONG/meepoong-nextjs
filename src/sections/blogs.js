@@ -4,33 +4,35 @@ import Masonry from 'react-masonry-component';
 import BlockTitle from 'components/block-title';
 import BlogCard from 'components/cards/blog-card';
 
-import firebase from '../firebase';
-import _ from 'lodash';
-const database = firebase.database();
+import useSWR from 'swr';
+
+const fetcher = async (...args) => {
+  const res = await fetch(...args);
+
+  return res.json();
+};
 
 const masonryOptions = {
   transitionDuration: 0,
 };
 
-const Blogs = () => {
-  const blogsRef = database.ref('/blogs');
-  const [newsList, setNewsList] = React.useState([])
-  React.useEffect(() => {
-    blogsRef.on('value', (snapshot) => {
-      const data = snapshot.val();
-      let messagesVal = data;
-      let messages = _(messagesVal)
-        .keys()
-        .map(messageKey => {
-          let cloned = _.clone(messagesVal[messageKey]);
-          cloned.key = messageKey;
-          return cloned;
-        }).value();
-      setNewsList(messages)
-    });
-    // eslint-disable-next-line
-  }, [])
 
+const Blogs = () => {
+  const { data } = useSWR(`/api/news`, fetcher);
+
+  if (!data) {
+    return <Box as="section" id="news" sx={styles.blogs}>
+      <Container>
+        <BlockTitle
+          title="Popular blog post we updated"
+          text="Updete newsfeed blog"
+        />
+        <Box as={Masonry} options={masonryOptions} sx={styles.blogWrapper}>
+          Loading...
+        </Box>
+      </Container>
+    </Box>;
+  }
   return (
     <Box as="section" id="news" sx={styles.blogs}>
       <Container>
@@ -39,7 +41,7 @@ const Blogs = () => {
           text="Updete newsfeed blog"
         />
         <Box as={Masonry} options={masonryOptions} sx={styles.blogWrapper}>
-          {newsList.map(
+          {data.map(
             ({ image, title, description, path, key }, index) => (
               <BlogCard
                 key={index}
