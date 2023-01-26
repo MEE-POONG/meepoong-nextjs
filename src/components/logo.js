@@ -13,7 +13,7 @@ export default function Logo({ image, width }) {
         alignItems: 'center',
       }}
     >
-      <Image src={image} width={width} alt="MEE POONG LOGO" />
+      <Image src={image} width={width} alt="ME PROMPT TECHNOLOGY LOGO" />
     </Link>
   );
 }

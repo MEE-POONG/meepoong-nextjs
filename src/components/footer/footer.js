@@ -31,7 +31,7 @@ export default function Footer() {
               mt: ['10px', null, null, null, null, '0'],
             }}
           >
-            Copyright by {new Date().getFullYear()} MEE POONG CO., LTD.
+            Copyright by {new Date().getFullYear()} ME PROMPT TECHNOLOGY CONPANY LIMITED
           </Text>
         </Box>
         <Box sx={styles.linksWrap}>

@@ -59,7 +59,7 @@ const BannerNews = ({title}) => {
 
         <Image src={logoImage} width="300px" alt="logo image" />
         <div style={{ marginTop: '30px' }} />
-        <Heading as="h1">MEE POONG NEWS</Heading>
+        <Heading as="h1">ME PROMPT TECHNOLOGY NEWS</Heading>
         <Heading as="h2">{title}</Heading>
         <div style={{ marginBottom: '150px' }} />
         {/* <Image src={bannerImage} sx={styles.bannerImage} alt="banner moc" /> */}
