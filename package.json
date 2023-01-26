@@ -7,7 +7,10 @@
     "build": "next build",
     "serve": "next start",
     "export": "next export",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "docker:build": "docker build -t chunwarayut/meepoong-nextjs:latest .",
+    "docker:push": "docker push chunwarayut/meepoong-nextjs:latest",
+    "docker:b:p": "npm run docker:build && npm run docker:push"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
