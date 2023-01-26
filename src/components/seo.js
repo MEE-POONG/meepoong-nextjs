@@ -6,7 +6,7 @@ export default function SEO({
   author = 'MEEPOONG CO., LTD.',
   image = 'https://firebasestorage.googleapis.com/v0/b/meepoong-af0cc.appspot.com/o/assets%2FScreen%20Shot%202564-10-10%20at%2012.35.41.png?alt=media&token=a36f1f19-4d55-4643-be70-653af811d175',
   meta,
-  title = 'MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์',
+  title = 'ME PROMPT TECHNOLOGY รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์',
 }) {
   const metaData = [
     {

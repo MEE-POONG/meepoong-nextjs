@@ -32,7 +32,7 @@ const NewsDetail = () => {
     <ThemeProvider theme={theme}>
       <StickyProvider>
         <Layout>
-          <SEO title={`${title} - NEWS | ข่าวสาร | BLOG - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์ มีพุง จำกัด`} description={description} image={image} />
+          <SEO title={`${title} - NEWS | ข่าวสาร | BLOG - ME PROMPT TECHNOLOGY รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์ มีพุง จำกัด`} description={description} image={image} />
           <BannerNewsDetail title={title} />
           <BlogDetail title={title} description={description} detail={detail} image={image} key={key} />
         </Layout>
