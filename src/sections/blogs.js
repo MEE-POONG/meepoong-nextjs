@@ -20,7 +20,7 @@ const masonryOptions = {
 const Blogs = () => {
   const { data } = useSWR(`/api/news`, fetcher);
 
-  if (!data) {
+  if (!data || data.length === 0) {
     return <Box as="section" id="news" sx={styles.blogs}>
       <Container>
         <BlockTitle

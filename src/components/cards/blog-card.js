@@ -14,7 +14,7 @@ const BlogCard = ({ image, title, description, path, linkLabel }) => {
     >
       {image !== null && (
         <Box sx={styles.image}>
-          <Image src={image} alt={title} />
+          <Image src={image} alt={title} width={300} height={300}/>
         </Box>
       )}
 
