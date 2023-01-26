@@ -1,10 +1,10 @@
-FROM node:lts AS dependencies
+FROM node:14.21.2 AS dependencies
 
 WORKDIR /app
 COPY package.json ./
 RUN yarn
 
-FROM node:lts AS build
+FROM node:14.21.2 AS build
 
 WORKDIR /app
 COPY --from=dependencies /app/node_modules ./node_modules
@@ -13,7 +13,7 @@ COPY . .
 RUN npx prisma generate
 RUN yarn build
 
-FROM node:lts AS deploy
+FROM node:14.21.2 AS deploy
 
 WORKDIR /app
 
