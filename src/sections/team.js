@@ -12,8 +12,14 @@ import bannerIcon7 from 'assets/dot-pattern.svg';
 
 const TEAM_DATA = [
   {
+    url: 'https://www.facebook.com/chunwarayut',
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/meepoong-af0cc.appspot.com/o/team%2Fchun%2FIMG_0864.png?alt=media&token=1af3bb64-942f-4266-b4ac-6ef215a6cee0',
+    title: 'Warayut Tekrathok',
+    designation: 'Head of Full Stack Developer',
+  },
+  {
     url: 'https://www.facebook.com/devilzeros',
-    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/meepoong-af0cc.appspot.com/o/team%2F20988300_1705363422858434_6524213264425628365_o_adobespark%20(1).jpeg?alt=media&token=53fcdebf-f8c3-4891-87d2-328961de3baa',
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/meepoong-af0cc.appspot.com/o/team%2F271953062_4864243216993094_7255533252365734282_n-2.jpg?alt=media&token=3fb6515d-f63e-4acd-af07-bc926226e410',
     title: 'ณัฐวีษ์ ตันตระกูล',
     designation: 'Full Stack Developer',
   },
@@ -40,6 +46,12 @@ const TEAM_DATA = [
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/meepoong-af0cc.appspot.com/o/team%2FDA0A1DCA-4A80-40F2-9120-126ACC3AF701_adobespark.jpeg?alt=media&token=e38347da-b638-4e4d-a909-a9a07dfee7de',
     title: 'รุ้งแพรว ผิวสอาด',
     designation: 'Marketing',
+  },
+  {
+    url: 'https://web.facebook.com/profile.php?id=100004333623322',
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/meepoong-af0cc.appspot.com/o/team%2F118701835_1773190472835390_8997229702013429709_n-2.jpg?alt=media&token=0511331b-1080-47ec-ab17-8fea02b9f3e3',
+    title: 'Verasut Prueangsomboon',
+    designation: 'Head of Creative and Graphic Designer',
   },
   {
     url: 'https://www.facebook.com/areena.mm',

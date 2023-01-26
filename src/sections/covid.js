@@ -25,36 +25,36 @@ const Covid = () => {
     updated: "1629382499758"
   })
   useEffect(() => {
-    fetch("https://corona.lmao.ninja/v2/countries/TH").then(e => e.json()).then(e => {
-      setTodayCovid(e)
+    // fetch("https://corona.lmao.ninja/v2/countries/TH").then(e => e.json()).then(e => {
+    //   setTodayCovid(e)
 
       SET_COVID_DATA([
         {
           // icon: <MdPersonAdd />,
           image: serviceImage1,
-          heading: `ติดเชื้อ : ${currencyFormat(e.todayCases)}`,
-          text: `(สะสม ${currencyFormat(e.cases)})`
+          heading: `ติดเชื้อ : ${currencyFormat(21838)}`,
+          text: `(สะสม ${currencyFormat(736522)})`
         },
         {
           // icon: <GiHomeGarage />,
           image: serviceImage2,
-          heading: `หายแล้ว : ${currencyFormat(e.recovered)}`,
-          text: `(เพิ่มขึ้น ${currencyFormat(e.todayRecovered)})`
+          heading: `หายแล้ว : ${currencyFormat(517012)}`,
+          text: `(เพิ่มขึ้น ${currencyFormat(21108)})`
         },
         {
           // icon: <MdLocalHospital />,
           image: serviceImage3,
-          heading: `รักษาอยู่ : ${currencyFormat(e.active)}`,
+          heading: `รักษาอยู่ : ${currencyFormat(213444)}`,
           text: <span>&nbsp;</span>
         },
         {
           // icon: <BiGhost />,
           image: serviceImage4,
-          heading: `เสียชีวิต : ${currencyFormat(e.todayDeaths)} `,
-          text: `(สะสม ${currencyFormat(e.deaths)} )`
+          heading: `เสียชีวิต : ${currencyFormat(212)} `,
+          text: `(สะสม ${currencyFormat(6066)} )`
         },
       ]);
-    })
+    // })
   }, [])
 
 
