@@ -15,7 +15,7 @@ const TEAM_DATA = [
     url: 'https://www.facebook.com/chunwarayut',
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/meepoong-af0cc.appspot.com/o/team%2Fchun%2FIMG_0864.png?alt=media&token=1af3bb64-942f-4266-b4ac-6ef215a6cee0',
     title: 'Warayut Tekrathok',
-    designation: 'Head of Full Stack Developer',
+    designation: 'Special Consultant',
   },
   {
     url: 'https://www.facebook.com/devilzeros',
